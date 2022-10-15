@@ -1,0 +1,54 @@
+<h1>Authors</h1>
+<ul id="authors"></ul>
+<div id="datos"></div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<!-- 
+  
+  ID de la clave API = 887cnu94owl883k4t5lwxm582
+  Clave secreta API = 49f9njadyt2dcncuagt53eo0bibiz9vs5ja12ardqryp9lwn34 
+  AAP Token = Nombre: APIAnibal - AAPTOKEN: p6KqQH1yrtP7v2EYoE07Ux78l
+
+-->
+
+<script>
+  // const ul = document.getElementById('authors');
+  // const list = document.createDocumentFragment();
+  // const url = 'https://www.datos.gov.co/resource/iwgf-bkfk.json';
+
+  // fetch(url,data: {
+  //     "limit" : 5000,
+  //     "app_token" : "YOURAPPTOKENHERE"
+  //   })
+  //   .then(response => response.json())
+    
+  //   .then(data => {
+  //     console.log(data);
+  //     // debugger
+  //     for (let index = 0; index < data.length; index++) {
+  //       console.log(data[index].estu_nucleo_pregrado);
+        
+  //     }
+        
+    
+
+  //   })
+  //   .catch(function(error) {
+  //     console.log(error);
+  //   });
+
+
+$.ajax({
+    url: "https://www.datos.gov.co/resource/iwgf-bkfk.json",
+    type: "GET",
+    data: {
+      "$limit" : 840000,
+      "$$app_token" : "p6KqQH1yrtP7v2EYoE07Ux78l"
+    }
+}).done(function(data) {
+  alert("Retrieved " + data.length + " records from the dataset!");
+  console.log(data);
+});
+
+
+</script>
