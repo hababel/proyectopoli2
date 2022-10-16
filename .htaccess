@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}.php -f
+
+
+#RewriteRule ^([a-zA-Z]+)/([a-zA-Z0-9]+)$ index.php?c=$1&a=$2 [NC,L,QSA]
+#RewriteRule ^([a-zA-Z]+)$ index.php?c=$1 [NC,L,QSA]
+
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z0-9]+)$ index.php?c=$1&a=$2 [NC,L,QSA]
+RewriteRule ^([a-zA-Z]+)$ index.php?c=$1 [NC,L,QSA]
+
