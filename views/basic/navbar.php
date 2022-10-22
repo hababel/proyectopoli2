@@ -55,36 +55,36 @@
 
           <li class="nav-item">
             <a href="<?php echo URL_PATH; ?>sabert" class="nav-link">
-              <i class="nav-icon fas fad fa-chalkboard-teacher" style="color: #29AB70"></i>
+              <i class="nav-icon fas fad fa-chalkboard-teacher" style="color: #ffffff"></i>
               <p>Informe de resultados Saber Pro y Saber TyT</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="<?php echo URL_PATH; ?>ayuda" class="nav-link">
-              <i class="nav-icon fas fad fa-hands-helping" style="color: #29AB70"></i>
+              <i class="nav-icon fas fad fa-hands-helping" style="color: #ffffff"></i>
               <p>Ayudas</p>
             </a>
           </li>
           <?php if ($_SESSION['user']['Tipo Usuario'] == 1) { ?>
             <li class="nav-item">
               <a href="<?php echo URL_PATH; ?>informe" class="nav-link">
-                <i class="nav-icon fas fa-th-list" style="color: #29AB70"></i>
+                <i class="nav-icon fas fa-th-list" style="color: #ffffff"></i>
                 <p>Módulo de exportación de informe en Power BI</p>
               </a>
             </li>
           <?php } ?>
-          <li class="nav-header"><b>Configuración</b></li>
+          <li class="nav-header"><b style="color: #f89406">Configuración</b></li>
           <?php if ($_SESSION['user']['Tipo Usuario'] == 1) { ?>
             <li class="nav-item">
               <a href="<?php echo URL_PATH; ?>usuario" class="nav-link">
-                <i class="nav-icon fas fa-user-lock" style="color: #29AB70"></i>
+                <i class="nav-icon fas fa-user-lock" style="color: #ffffff"></i>
                 <p>Usuarios</p>
               </a>
             </li>
           <?php } ?>
           <li class="nav-item">
             <a href="<?php echo URL_PATH; ?>login/logout" class="nav-link">
-              <i class="nav-icon fas fad fa-sign-out" style="color:red"></i>
+              <i class="nav-icon fas fad fa-sign-out" style="color:#f89406"></i>
               <p>Salir</p>
             </a>
           </li>

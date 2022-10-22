@@ -11,6 +11,7 @@ error_reporting(E_ALL);
 //Se incluye la configuración inicial
 require_once ("config/config.php");
 
+
 //Se incluye la conexión a datos del modelo
 require_once("config/conn.php");
 
