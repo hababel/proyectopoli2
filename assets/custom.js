@@ -1,11 +1,14 @@
 
 function lista_usuarios(){
   var desde="listarusuarios";
+  var url_basic=$("#url_basic").val();
+  var url_ajax=url_basic+"ajaxcontroller/usuarios.php";
 
   var data={desde};
   $.ajax({
     type: "POST",
-    url: "http://proyectopoli.generandocodigo.com/ajaxcontroller/usuarios.php",
+    url: url_ajax,
+    /* url: "http://proyectopoli.generandocodigo.com/ajaxcontroller/usuarios.php", */
     data: data,
     dataType: "JSON",
     success: function (response) {
@@ -213,9 +216,12 @@ function verificarForm(){
 
      if(envio_form == true){
         var data=datae;
+        var url_basic=$("#url_basic").val();
+        var url_ajax=url_basic+"ajaxcontroller/usuarios.php";
+
         $.ajax({
             type: "POST",
-            url: "http://proyectopoli.generandocodigo.com/ajaxcontroller/usuarios.php",
+            url: url_ajax,
             data: data,
             // dataType: "JSON",
             success: function (response) {
@@ -331,9 +337,12 @@ function cambioclaveusuario(){
                 "iconClass": 'toast-warning'})
     }else{
       data={desde,idusuariocambioclave,nuevaclaveusuario};
+      var url_basic=$("#url_basic").val();
+      var url_ajax=url_basic+"ajaxcontroller/usuarios.php";
+
       $.ajax({
         type: "POST",
-        url: "http://proyectopoli.generandocodigo.com/ajaxcontroller/usuarios.php",
+        url: url_ajax,
         data: data,
         success: function (response) {
           if(response == 1){

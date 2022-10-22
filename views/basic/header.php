@@ -7,6 +7,7 @@
 
 <?php require_once("script.php"); ?>
 <div class="wrapper">
+  <input type="hidden" name="" id="url_basic" value="<?php echo URL_PATH; ?>">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
