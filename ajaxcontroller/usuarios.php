@@ -121,7 +121,24 @@ if($_POST){
       default:
       # code...
       break;
-  }
+    case 'registro_usuario':
+      $nombre=$_POST['nombre'];
+      $nombre_corto=$_POST['nombre_corto'];
+      $email=$_POST['email'];
+      $clave=$_POST['clave'];
+      $tipo_usuario=2;
+      $estado=0;
+      $clave_usuarionuevo_encrypt=password_hash($clave,PASSWORD_DEFAULT);
+      $buscar_usuario=$instajax->buscar_usuario($email);
+      if($buscar_usuario){
+        echo 0;
+      }else{
+        $insertar_usuario=$instajax->crear_usuario($nombre,$nombre_corto,$email,$clave,$tipo_usuario,$estado);
+        echo ($insertar_usuario)?1:0;
+      }
+
+      break;
+    }
 }else{
   header("Location:" . URL_PATH);
 }

@@ -31,6 +31,16 @@
             return $stm->fetchAll(PDO::FETCH_OBJ);
         }
 
+        function buscar_usuario($email){
+            $sql="SELECT 
+                    us.Email 
+                from usuarios us 
+                where us.Email=".$email;
+            $stm = $this->pdo->prepare($sql);
+            $stm->execute();
+            return ($stm->fetch(PDO::FETCH_OBJ));
+        }
+
         /* Script para crear usuario nuevo */
         function crear_usuario($nombre,$Nombre_Corto,$Email,$Clave,$tipo_usuario,$estado){
             $sql="INSERT INTO usuarios (nombre, Nombre_Corto, Email, Clave, tipo_usuario, estado) 
