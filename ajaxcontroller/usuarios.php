@@ -133,7 +133,7 @@ if($_POST){
       if($buscar_usuario){
         echo 0;
       }else{
-        $insertar_usuario=$instajax->crear_usuario($nombre,$nombre_corto,$email,$clave,$tipo_usuario,$estado);
+        $insertar_usuario=$instajax->crear_usuario($nombre,$nombre_corto,$email,$clave_usuarionuevo_encrypt,$tipo_usuario,$estado);
         echo ($insertar_usuario)?1:0;
       }
 
