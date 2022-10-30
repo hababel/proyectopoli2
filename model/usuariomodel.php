@@ -35,9 +35,9 @@
             $sql="SELECT 
                     us.Email 
                 from usuarios us 
-                where us.Email=".$email;
+                where us.Email=?";
             $stm = $this->pdo->prepare($sql);
-            $stm->execute();
+            $stm->execute(array($email));
             return ($stm->fetch(PDO::FETCH_OBJ));
         }
 
