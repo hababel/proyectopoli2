@@ -214,6 +214,84 @@
 
       }
     }
+
+    function registro_usuario(){
+
+      nombre=$("#nombre_registro_usuario").val();
+      nombre_corto=$("#nombrecorto_registro_usuario").val();
+      email=$("#email_registro_usuario").val();
+      clave=$("#clave_registro_usuario").val();
+      
+
+      if(nombre=="" || nombre_corto=="" || email=="" || clave==""){
+          
+          toastr.warning(
+            'Los campos son obligatorios ,<br>por favor complete.',	'Atencion !',
+            {
+              showDuration: 400,
+              "progressBar": true,
+              "closeButton": true,
+              "iconClass": 'toast-warning'
+            }
+          )
+
+      }else{
+        
+        if(clave.length < 8){
+          toastr.warning(
+            'La clave debe ser mayor de 8 caracteres ,<br>por favor valide.',	'Atencion !',
+            {
+              showDuration: 400,
+              "progressBar": true,
+              "closeButton": true,
+              "iconClass": 'toast-warning'
+            }
+          )
+        }else{
+          var from="registro_usuario"
+          var data={from,nombre,nombre_corto,email,clave};
+          $.ajax({
+              type: "POST",
+              url: "http://proyectopoli.generandocodigo.com/ajaxcontroller/usuarios.php",
+              data: data,
+              // dataType: "JSON",
+              success: function (response) {
+                
+                if(response==1){
+                
+                  toastr.success(
+                    mensaje,	'Hecho !',
+                    {showDuration: 300,
+                    "progressBar": true,
+                    "closeButton": true,
+                    "iconClass": 'toast-success'})
+                    
+                }else{
+                    toastr.warning(
+                    'Ese correo ya se encuentra registrado. <br> Por favor intente con otro.',	'Atencion !',
+                    {showDuration: 400,
+                    "progressBar": true,
+                    "closeButton": true,
+                    "iconClass": 'toast-warning'})
+                }
+              }
+              
+          });
+        
+        }
+
+      }
+        
+
+      // toastr.error(
+      //       'Ocurrio un error.<br>Por favor contactar a soporte',	'Error !',
+      //       {showDuration: 400,
+      //       "progressBar": true,
+      //       "closeButton": true,
+      //       "iconClass": 'toast-error'})
+          
+      
+    }
   </script>
 
   <script>
