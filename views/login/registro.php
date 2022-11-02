@@ -39,7 +39,7 @@
     <input type="hidden" name="" id="url_basic" value="<?php echo URL_PATH; ?>">
 
     <form class="formulario" method="POST">
-        <legend>Registro de Usuarios</legend>
+        <legend class="titulo-formulario">Registro de Usuarios</legend>
 
         <fieldset>
             <div class="contenedor-campos">
