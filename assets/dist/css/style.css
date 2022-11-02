@@ -1,6 +1,6 @@
 .formulario {
     background-color: #29AB70;
-    width: min( 60rem, 100% ); /** Utilizar el valor más pequeño **/
+    width: min( 30rem, 100% ); /** Utilizar el valor más pequeño **/
     margin: 0 auto;
     padding: 2rem;
     height: auto;
@@ -9,6 +9,11 @@
 
 .formulario fieldset {
     border: none;
+}
+.titulo-formulario{
+    color: #F4D331;
+    font-weight: bold;
+    font-size:2rem;
 }
 
 @media (min-width: 768px) {
@@ -43,7 +48,7 @@
     color: #29AB70;
     padding: auto auto;
     margin-right: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
     border-radius: .5rem;
@@ -55,6 +60,7 @@
 @media (min-width: 768px) {
     .boton {
         width: auto;
+        font-size: 1.5rem;
     }
 }
 .boton:hover {

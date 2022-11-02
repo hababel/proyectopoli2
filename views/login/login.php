@@ -73,11 +73,11 @@
         <div>
           <div class="row">
             <div class="col">
-            <p class="mb-1" style="margin-top: 20px; text-align: center;">
+            <p class="mb-1" style="margin-top: 20px; display: flex; justify-content: space-between ">
             <a href="login/forgotpass" style="color: #29AB70" >Recordar clave</a>
-            <a href="login/registro" style="color: #29AB70" >Regístrate</a>
+            <a href="login/registro" style="color: #29AB70">Regístrate</a>
           </p>
-            </div>
+            </div> 
           </div>      
         </div>
       </div>
