@@ -16,11 +16,6 @@
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/style.css">
 
-  <style>
-
-
-  </style>
-
 
   <!-- jQuery -->
   <script src="<?php echo URL_PATH; ?>assets/plugins/jquery/jquery.min.js"></script>

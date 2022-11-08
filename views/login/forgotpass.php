@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/plugins/toastr/toastr.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/style.css">
 
 
   <!-- jQuery -->
@@ -35,8 +36,7 @@
 
   $Datamessage = (!empty($_SESSION['Datamessage'])) ? $_SESSION['Datamessage'] : null;
 
-
-  if ($Datamessage != null || $Datamessage) {
+  if ($Datamessage) {
 
     $statusmsg = $Datamessage['message']['error'];
     $typemsg = $Datamessage['message']['type'];
@@ -56,8 +56,7 @@
             })
       </script>
     ";
-  } else {
-  }
+  } 
 
 
   ?>
