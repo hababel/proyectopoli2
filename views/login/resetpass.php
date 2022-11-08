@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/plugins/toastr/toastr.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/style.css">
 
 
   <!-- jQuery -->
@@ -55,7 +56,7 @@
             <div class="col-6">
               <div class="send-button">
                 <input type="hidden" name="fp_code" value="<?php echo $token_code; ?>" />
-                <input type="button" class="btn btn-primary btn-block" name="resetSubmit" onclick="valide_form();" value="Grabar">
+                <input type="button" class="btn btn-block" style="background-color: #196945; color:white" name="resetSubmit" onclick="valide_form();" value="Grabar">
               </div>
             </div>
           </div>
