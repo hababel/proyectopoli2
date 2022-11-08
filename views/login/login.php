@@ -145,7 +145,6 @@
       nombre_corto=$("#nombrecorto_registro_usuario").val();
       email=$("#email_registro_usuario").val();
       clave=$("#clave_registro_usuario").val();
-      
 
       if(nombre=="" || nombre_corto=="" || email=="" || clave==""){
           
@@ -184,7 +183,7 @@
                 if(response==1){
                 
                   toastr.success(
-                    mensaje,	'Hecho !',
+                    mensaje,	'Gracias por su registro. Pronto el administrador se prondra en contacto!',
                     {showDuration: 300,
                     "progressBar": true,
                     "closeButton": true,
@@ -216,6 +215,7 @@
           
       
     }
+
   </script>
 </body>
 

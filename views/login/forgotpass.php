@@ -83,7 +83,7 @@
 
           <div class="row">
             <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block" name="forgotpass_button">Recordar clave</button>
+              <button type="submit" class="btn btn-block" style="background-color: #196945; color:white" name="forgotpass_button">Recordar clave</button>
               <!-- <button type="submit" class="btn btn-primary btn-block" name="forgotpass_button" onclick="validar_form();">Recordar clave</button> -->
             </div>
           </div>

@@ -52,9 +52,14 @@ $.ajax({
   .done(function(response) {
 
     var mod_competen_ciudada_punt = [];
-    var vestu_prgm_academico = [];
+    var vestu_prgm_academico = new Array();
 
-    //console.log(response);
+   var obj= new Object();
+      
+    const nombres = response.map((x) => x.estu_prgm_academico);
+    // He cambiado el nombre de la variable nombre a arrayNombres, mucho más indicativo de su contenido!
+    const arrayNombres = [...new Set(nombres)];
+    // Se declara un arrayVentas vacío, aquí almacenaremos las ventas de cada uno
 
     for (var i in response) {
       
@@ -65,230 +70,11 @@ $.ajax({
       // var existe_programa=names.includes(response[i].estu_prgm_academico); 
       var anno=response[i].periodo.substring(0,4);
       //let existe_programa = vestu_prgm_academico.findIndex(mascota => mascota.Programa === response[i].estu_prgm_academico);
-      let existe_anno = vestu_prgm_academico.indexOf(vanno => vanno === anno);
-      console.log(existe_anno + " -> anno: " + vestu_prgm_academico[existe_anno]);
+      let existe_anno = vestu_prgm_academico.findIndex(vanno => vanno.anno === anno);
+
       var puntaje=Number.parseInt(response[i].mod_ingles_punt);
       var mod_ingles_desem=response[i].mod_ingles_desem;
-      
-      if(i < 10){
-        //if(existe_anno == -1){
-         vestu_prgm_academico={"anno":anno};
-         vestu_prgm_academico[anno]={i:mod_ingles_desem};
-         //vestu_prgm_academico[anno]=new Array();
-        //}else{
-          
-            // vestu_prgm_academico[anno]={
-            // "info":i,
-            // "suma":i+i }
-
-       // }
-      }
-      
-
-      
-      /*
-      if(existe_programa < 0){
-        
-        switch (mod_ingles_desem) {
-          case '-A1':
-            var data=new Array();
-              data.push({
-                  "Programa": response[i].estu_prgm_academico,
-                  "cantidad_programa":1,
-                  "-A1":puntaje,
-                  "C-A1":1,
-                  "P-A1":puntaje/1,
-                  "A1":0,
-                  "CA1":0,
-                  "PA1":0,
-                  "A2":0,
-                  "CA2":0,
-                  "PA2":0,
-                  "-B1":0,
-                  "C-B1":0,
-                  "P-B1":0,
-                  "B1":0,
-                  "CB1":0,
-                  "PB1":0,
-                  "B2":0,
-                  "CB2":0,
-                  "PB2":0,
-              });
-              vestu_prgm_academico.anno.push(data);
-            break;
-          case 'A1':
-            vestu_prgm_academico.push({
-                  "Programa": response[i].estu_prgm_academico,
-                  "cantidad_programa":1,
-                  "-A1": 0,
-                  "C-A1":0,
-                  "P-A1":0,
-                  "A1":puntaje,
-                  "CA1":1,
-                  "PA1":puntaje/1,
-                  "A2":0,
-                  "CA2":0,
-                  "PA2":0,
-                  "-B1":0,
-                  "C-B1":0,
-                  "P-B1":0,
-                  "B1":0,
-                  "CB1":0,
-                  "PB1":0,
-                  "B2":0,
-                  "CB2":0,
-                  "PB2":0,
-              })
-            break;
-          case 'A2':
-            vestu_prgm_academico.push({
-                  "Programa": response[i].estu_prgm_academico,
-                  "cantidad_programa":1,
-                  "-A1": 0,
-                  "C-A1":0,
-                  "P-A1":0,
-                  "A1":0,
-                  "CA1":0,
-                  "P-A1":0,
-                  "A2":puntaje,
-                  "CA2":1,
-                  "PA2":puntaje/1,
-                  "-B1":0,
-                  "C-B1":0,
-                  "P-B1":0,
-                  "B1":0,
-                  "CB1":0,
-                  "PB1":0,
-                  "B2":0,
-                  "CB2":0,
-                  "PB2":0,
-              })
-            break;
-          case '-B1':
-            vestu_prgm_academico.push({
-                  "Programa": response[i].estu_prgm_academico,
-                  "cantidad_programa":1,
-                  "-A1": 0,
-                  "C-A1":0,
-                  "P-A1":0,
-                  "A1":0,
-                  "CA1":0,
-                  "PA1":0,
-                  "A2":0,
-                  "CA2":0,
-                  "PA2":0,
-                  "-B1":puntaje,
-                  "C-B1":1,
-                  "P-B1":puntaje/1,
-                  "B1":0,
-                  "CB1":0,
-                  "PB1":0,
-                  "B2":0,
-                  "CB2":0,
-                  "PB2":0
-              })
-            break;
-          case 'B1':
-            vestu_prgm_academico.push({
-                  "Programa": response[i].estu_prgm_academico,
-                  "cantidad_programa":1,
-                  "-A1": 0,
-                  "C-A1":0,
-                  "P-A1":0,
-                  "A1":0,
-                  "CA1":0,
-                  "PA1":0,
-                  "A2":0,
-                  "CA2":0,
-                  "PA2":0,
-                  "-B1":0,
-                  "C-B1":0,
-                  "P-B1":0,
-                  "B1":puntaje,
-                  "CB1":1,
-                  "PB1":puntaje/1,
-                  "B2":0,
-                  "CB2":0,
-                  "PB2":0
-              })
-            break;
-          case 'B2':
-            vestu_prgm_academico.push({
-                  "Programa": response[i].estu_prgm_academico,
-                  "cantidad_programa":1,
-                  "-A1": 0,
-                  "C-A1":0,
-                  "P-A1":0,
-                  "A1":0,
-                  "CA1":0,
-                  "PA1":0,
-                  "A2":0,
-                  "CA2":0,
-                  "PA2":0,
-                  "-B1":0,
-                  "C-B1":0,
-                  "P-B1":0,
-                  "B1":0,
-                  "CB1":0,
-                  "PB1":0,
-                  "B2":puntaje,
-                  "CB2":1,
-                  "PB2":puntaje/1
-                  
-              })
-            break;
-
-          default:
-            break;
-        }
-
-        $('#programas').append("<option value='"+i+"'>"+response[i].estu_prgm_academico+"</option>");
-        
-      }else if(existe_programa >= 0){
-
-        vestu_prgm_academico[existe_programa].cantidad_programa+=1;
-        
-        switch (mod_ingles_desem) {
-          case '-A1':
-            vestu_prgm_academico[existe_programa]["C-A1"]+=1;
-            vestu_prgm_academico[existe_programa]["-A1"]+=puntaje;
-            vestu_prgm_academico[existe_programa]["P-A1"]=vestu_prgm_academico[existe_programa]["-A1"]/vestu_prgm_academico[existe_programa]["C-A1"];
-            break;
-          case 'A1':
-            vestu_prgm_academico[existe_programa]["CA1"]+=1;
-            vestu_prgm_academico[existe_programa].A1+=puntaje;
-            vestu_prgm_academico[existe_programa]["PA1"]=vestu_prgm_academico[existe_programa]["A1"]/vestu_prgm_academico[existe_programa]["CA1"];
-            break;
-          case 'A2':
-            vestu_prgm_academico[existe_programa]["CA2"]+=1;
-            vestu_prgm_academico[existe_programa].A2+=puntaje;
-            vestu_prgm_academico[existe_programa]["PA2"]=vestu_prgm_academico[existe_programa]["A2"]/vestu_prgm_academico[existe_programa]["CA2"];
-            break;
-          case '-B1':
-            vestu_prgm_academico[existe_programa]["C-B1"]+=1;
-            vestu_prgm_academico[existe_programa]["-B1"]+=puntaje;
-            vestu_prgm_academico[existe_programa]["P-B1"]=vestu_prgm_academico[existe_programa]["-B1"]/vestu_prgm_academico[existe_programa]["C-B1"];
-            break;
-          case 'B1':
-            vestu_prgm_academico[existe_programa].CB1+=1;
-            vestu_prgm_academico[existe_programa].B1+=puntaje;
-            vestu_prgm_academico[existe_programa]["PB1"]=vestu_prgm_academico[existe_programa]["B1"]/vestu_prgm_academico[existe_programa]["CB1"];
-            break;
-          case 'B2':
-            vestu_prgm_academico[existe_programa].CB2+=1;
-            vestu_prgm_academico[existe_programa].B2+=puntaje;
-            vestu_prgm_academico[existe_programa]["PB2"]=vestu_prgm_academico[existe_programa]["B2"]/vestu_prgm_academico[existe_programa]["CB2"];
-            break;
-        
-          default:
-            break;
-        }
-      }*/
-
     }
-
-    console.log(vestu_prgm_academico);
-    console.log(vestu_prgm_academico.anno);
 
     // Obtener una referencia al elemento canvas del DOM
      var mostrar = $("#miGrafico");

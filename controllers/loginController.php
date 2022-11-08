@@ -154,12 +154,30 @@ class loginController{
 							$File = ob_get_contents();
 							ob_end_clean();
 
-							//$enviocorreos = enviarEmail($foundemailuser->nombre,$foundemailuser->Email, $File, $subject, $ajaxresponse);
+							$enviocorreos = enviarEmail($foundemailuser->nombre,$foundemailuser->Email, $File, $subject, $ajaxresponse);
+              
+              if($enviocorreos){
+
+                $sessData['message']['error'] = false;
+                $sessData['message']['type'] = 'success';
+                $sessData['message']['title'] = 'Hecho!';
+                $sessData['message']['msg'] = 'Valide su correo electrónico.';
+                $_SESSION['Datamessage'] = $sessData;
+                
+              }else{
+
+                $sessData['message']['error'] = true;
+                $sessData['message']['type'] = 'error';
+                $sessData['message']['title'] = 'Error';
+                $sessData['message']['msg'] = 'Ha ocurrido un problema.  Por favor comuniquese con soporte.';
+                $_SESSION['Datamessage'] = $sessData;
+                
+              }
 						}
 
-						echo "<a href='". $resetPassLink."'>link</a>";
-            
-						//header("Location:".URL_PATH,true,302);
+						//echo "<a href='". $resetPassLink."'>link</a>";
+
+						header("Location:".URL_PATH,true,302);
             exit();
           } else {
 
@@ -170,7 +188,7 @@ class loginController{
 
 						$_SESSION['Datamessage'] = $sessData;
 
-						 //header("Location:" . URL_PATH . "login/forgotpass",true,302);
+						 header("Location:" . URL_PATH . "login/forgotpass",true,302);
              exit();
           }
         } else {
@@ -182,7 +200,7 @@ class loginController{
           
           $_SESSION['Datamessage'] = $sessData;
 
-          //header("Location:" . URL_PATH. "login/forgotpass",true,302);
+          header("Location:" . URL_PATH. "login/forgotpass",true,302);
           exit();
         }
 
@@ -204,7 +222,7 @@ class loginController{
 							$sessData['message']['title'] = 'Hecho!';
 							$sessData['message']['msg'] = 'Clave actualizada.  Por favor ingrese con su nueva clave.';
 							$_SESSION['Datamessage'] = $sessData;
-							//header("Location:".URL_PATH,true,302);
+							header("Location:".URL_PATH,true,302);
 							exit();
 						} else {
 							$sessData['message']['error'] = true;
@@ -212,7 +230,7 @@ class loginController{
 							$sessData['message']['title'] = 'Error!';
 							$sessData['message']['msg'] = 'Ha ocurrido un problema.  Por favor comuniquese con soporte.';
 							$_SESSION['Datamessage'] = $sessData;
-							//header("Location:" . URL_PATH . "login/forgotpass",true,302);
+							header("Location:" . URL_PATH . "login/forgotpass",true,302);
 							exit();
 						}
 
@@ -223,7 +241,7 @@ class loginController{
 					$sessData['message']['title'] = 'Error!';
 					$sessData['message']['msg'] = 'No esta autorizado para este proceso.';
 					$_SESSION['Datamessage'] = $sessData;
-					//header("Location:" . URL_PATH,true,302);
+					header("Location:" . URL_PATH,true,302);
 					exit();
 				}
       
@@ -234,7 +252,7 @@ class loginController{
 			$sessData['message']['title'] = 'Error!';
 			$sessData['message']['msg'] = 'Ha ocurrido un problema.  Por favor comuniquese con soporte.';
 			$_SESSION['Datamessage'] = $sessData;
-			//header("Location:" . URL_PATH . "login",true,302);
+			header("Location:" . URL_PATH . "login",true,302);
 			exit();
 
 		}
