@@ -108,6 +108,11 @@ class loginController{
     require_once(RUTA_VISTAS."login/forgotpass.php");
 
   }
+  public function registro(){
+
+    require_once(RUTA_VISTAS."login/registro.php");
+
+  }
 
   /*
   Muestra la vista para escribir la nueva clave, cuando solicite recordar clave.

@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/plugins/toastr/toastr.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo URL_PATH; ?>assets/dist/css/style.css">
+
+  <style>
+
+
+  </style>
 
 
   <!-- jQuery -->
@@ -24,42 +30,14 @@
   <script src="<?php echo URL_PATH; ?>assets/plugins/toastr/toastr.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?php echo URL_PATH; ?>assets/dist/js/adminlte.min.js"></script>
+  
 
 
 </head>
 
 
 <body class="hold-transition login-page">
-
-  <?php
-
-  $Datamessage = (!empty($_SESSION['Datamessage'])) ? $_SESSION['Datamessage'] : null;
-
-
-  if ($Datamessage != null || $Datamessage) {
-
-    $statusmsg = $Datamessage['message']['error'];
-    $typemsg = $Datamessage['message']['type'];
-    $titlemsg = $Datamessage['message']['title'];
-    $textmsg = $Datamessage['message']['msg'];
-
-    unset($_SESSION['Datamessage']);
-
-    echo "
-      <script>
-          toastr." . $typemsg . "(
-            '" . $textmsg . "', '" . $titlemsg . "', {
-              showDuration: 400,
-              'progressBar': true,
-              'closeButton': true,
-              'iconClass': 'toast-" . $typemsg . "'
-            })
-      </script>
-    ";
-  }
-
-  ?>
-
+  
   <div class="login-box">
     <div class="login-logo">
       <a href="" style="color:#196945"><b style="color: #29AB70">Proyecto</b>-POLI</a>
@@ -92,19 +70,27 @@
             </div>
           </div>
         </form>
-        <p class="mb-1" style="margin-top: 20px">
-          <a href="login/forgotpass" style="color: #29AB70">Recordar clave</a>
-        </p>
-
+        <div>
+          <div class="row">
+            <div class="col">
+            <p class="mb-1" style="margin-top: 20px; display: flex; justify-content: space-between ">
+            <a href="login/forgotpass" style="color: #29AB70" >Recordar clave</a>
+            <a href="login/registro" style="color: #29AB70">Regístrate</a>
+          </p>
+            </div> 
+          </div>      
+        </div>
       </div>
     </div>
   </div>
 
-
+  
   <script type="text/javascript">
     $(document).ready(function() {
-
+      
     });
+
+    
 
     function validar_form_login() {
       var email_input = $("#email_input").val();
@@ -139,84 +125,10 @@
       }
     }
 
-    function registro_usuario(){
-
-      nombre=$("#nombre_registro_usuario").val();
-      nombre_corto=$("#nombrecorto_registro_usuario").val();
-      email=$("#email_registro_usuario").val();
-      clave=$("#clave_registro_usuario").val();
-
-      if(nombre=="" || nombre_corto=="" || email=="" || clave==""){
-          
-          toastr.warning(
-            'Los campos son obligatorios ,<br>por favor complete.',	'Atencion !',
-            {
-              showDuration: 400,
-              "progressBar": true,
-              "closeButton": true,
-              "iconClass": 'toast-warning'
-            }
-          )
-
-      }else{
-        
-        if(clave.length < 8){
-          toastr.warning(
-            'La clave debe ser mayor de 8 caracteres ,<br>por favor valide.',	'Atencion !',
-            {
-              showDuration: 400,
-              "progressBar": true,
-              "closeButton": true,
-              "iconClass": 'toast-warning'
-            }
-          )
-        }else{
-          var from="registro_usuario"
-          var data={from,nombre,nombre_corto,email,clave};
-          $.ajax({
-              type: "POST",
-              url: "http://proyectopoli.generandocodigo.com/ajaxcontroller/usuarios.php",
-              data: data,
-              // dataType: "JSON",
-              success: function (response) {
-                
-                if(response==1){
-                
-                  toastr.success(
-                    mensaje,	'Gracias por su registro. Pronto el administrador se prondra en contacto!',
-                    {showDuration: 300,
-                    "progressBar": true,
-                    "closeButton": true,
-                    "iconClass": 'toast-success'})
-                    
-                }else{
-                    toastr.warning(
-                    'Ese correo ya se encuentra registrado. <br> Por favor intente con otro.',	'Atencion !',
-                    {showDuration: 400,
-                    "progressBar": true,
-                    "closeButton": true,
-                    "iconClass": 'toast-warning'})
-                }
-              }
-              
-          });
-        
-        }
-
-      }
-        
-
-      // toastr.error(
-      //       'Ocurrio un error.<br>Por favor contactar a soporte',	'Error !',
-      //       {showDuration: 400,
-      //       "progressBar": true,
-      //       "closeButton": true,
-      //       "iconClass": 'toast-error'})
-          
-      
-    }
-
+    
   </script>
+
+  
 </body>
 
 </html>

@@ -11,3 +11,5 @@
      </div>
    </div>
  </div>
+
+ <?php include ("../basic/footer.php")?>
