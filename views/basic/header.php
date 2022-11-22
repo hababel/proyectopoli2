@@ -11,5 +11,5 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="<?php echo URL_PATH; ?>views/img/logo_politecnico.png " alt="" height="200" width="400">
+    <img class="animation__shake" src="<?php echo URL_PATH; ?>views/img/logo_politecnico.png " alt="" height="150" width="170">
   </div>
