@@ -35,7 +35,7 @@
 
   <aside class="main-sidebar sidebar-dark-green elevation-4">
     <a href="<?php URL_PATH; ?>home" class="brand-link">
-      <img src="views/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="<?php echo URL_PATH; ?>views/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Inicio</span>
     </a>
 
@@ -54,11 +54,30 @@
           </li> -->
 
           <li class="nav-item">
-            <a href="<?php echo URL_PATH; ?>sabert" class="nav-link">
+            <a href="" class="nav-link">
               <i class="nav-icon fas fad fa-chalkboard-teacher" style="color: #ffffff"></i>
-              <p>Informe de resultados Saber Pro y Saber TyT</p>
+              <p>Saber Pro y Saber TyT</p>
+              <i class="right fas fa-angle-left"></i>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo URL_PATH; ?>sabert/informe"s class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Informe de resultados</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo URL_PATH; ?>sabert/interpretars" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Interpretacion de resultados</p>
+                </a>
+              </li>
+              
+            </ul>
           </li>
+
+
+
           <li class="nav-item">
             <a href="<?php echo URL_PATH; ?>ayuda" class="nav-link">
               <i class="nav-icon fas fad fa-hands-helping" style="color: #ffffff"></i>
