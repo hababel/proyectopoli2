@@ -113,7 +113,6 @@
 
                 toastr.warning(
                     'Los campos son obligatorios ,<br>por favor complete.', 'Atencion !', {
-                        
                         "timeOut": "3000",
                         "progressBar": true,
                         "closeButton": true,

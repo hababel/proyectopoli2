@@ -51,7 +51,7 @@ class loginController{
 
               $_SESSION['Datamessage'] = $sessData;
 
-              header("Location:" . URL_PATH);
+              header("Location:" . URL_PATH,301,true);
               exit();
 
             }else{
@@ -66,7 +66,7 @@ class loginController{
                   'estado' => $validacion_user->estado,
                 );
 
-                header("Location:" . URL_PATH ."home");
+                header("Location:" . URL_PATH ."home",301,true);
                 exit();
 
             }
@@ -94,7 +94,7 @@ class loginController{
 
         $_SESSION['Datamessage'] = $sessData;
 
-        header("Location:" . URL_PATH);
+        header("Location:" . URL_PATH,301,true);
 
     }
 
