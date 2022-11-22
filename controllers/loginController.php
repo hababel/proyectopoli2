@@ -39,7 +39,7 @@ class loginController{
     $validacion_user=$this->instmodel->validalogin($email_input);
 
     if($validacion_user){
-        echo $validacion_user;
+        
         if (password_verify($pass_input, $validacion_user->Clave)) {
 
             if($validacion_user->estado == 0){
