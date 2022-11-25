@@ -13,9 +13,10 @@
               <!-- <object data="<?php //echo URL_PATH;?>views/pdfs/Info_nal_resultadospruebassaberpro_20202125.pdf" height="100%" width="100%"></object> -->
               
               <!-- <iframe src="<?php //echo URL_PATH;?>views/pdfs/Info_nal_resultadospruebassaberpro_20202125.pdf" width="100%" height="680px"></iframe> -->
-              <iframe src="http://docs.google.com/gview?url=
-<?php echo URL_PATH;?>views/pdfs/Info_nal_resultadospruebassaberpro_20202125.pdf
-&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>
+              <!-- <iframe src="http://docs.google.com/gview?url=
+<?php //echo URL_PATH;?>views/pdfs/Info_nal_resultadospruebassaberpro_20202125.pdf
+&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe> -->
+              <embed src="<?php echo URL_PATH;?>views/pdfs/Info_nal_resultadospruebassaberpro_20202125.pdf" type="application/pdf" width="100%" height="600px" />
             </div>
          </div>
        </div>
