@@ -9,7 +9,7 @@
      <div class="container">
        <div class="row">
          <div class="col">
-           <iframe title="dashboards_FINAL" width="1140" height="541.25"src="https://app.powerbi.com/reportEmbed?reportId=275a6337-0785-4af3-876d-9e328945d4a6&autoAuth=true&ctid=73c0ac5c-e833-4928-b586-f242f2b29b3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXVzLWVhc3QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9" frameborder="0" allowFullScreen="true"></iframe>
+           <iframe title="dashboards_FINAL" width="1140" src="https://app.powerbi.com/reportEmbed?reportId=6fd20556-d266-4dee-8969-77bb040d3f36&autoAuth=true&ctid=73c0ac5c-e833-4928-b586-f242f2b29b3f" frameborder="0" allowFullScreen="true"></iframe>
          </div>
        </div>
      </div>
