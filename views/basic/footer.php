@@ -5,19 +5,19 @@
     <h3 style="font-weight: bold;">Politécnico Colombiano Jaime Isaza Cadavid <span> © 2022</span></h3>
   </div>
   <div style="font-weight: bold;">
-    <p>Sede Medellín</p>
+    Sede Medellín
   </div>
   <div>
-    <p>Carrera 48 No. 7 – 151 - El Poblado</p>
+    Carrera 48 No. 7 – 151 - El Poblado
   </div>
   <div>
-    <p>Código Postal: 050022</p>
+    Código Postal: 050022
   </div>
   <div>
-    <p>PBX: (+57 4) 444 76 54 - (+57 4) 319 79 00</p>
+    PBX: (+57 4) 444 76 54 - (+57 4) 319 79 00
   </div>
   <div>
-    <p>NIT: 890980136-6</p>
+    NIT: 890980136-6
   </div>
 </section> 
 
