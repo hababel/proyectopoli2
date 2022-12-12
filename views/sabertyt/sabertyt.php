@@ -7,7 +7,7 @@
 
    <div class="content">
      <div class="container-fluid">
-       <img src="views/img/codigoQR_informes.png" class="img-fluid" alt="">
+       <img src="views/img/codigoQR_informes.jpeg" class="img-fluid" alt="">
      </div>
    </div>
  </div>
