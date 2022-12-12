@@ -20,7 +20,7 @@
             Opcion 1
           </div>
           <div class="col-12" style="text-align:center; ">
-            <a href="https://aka.ms/AAh9atw" alt=""><h4>Redireccionar por medio de link</h4>
+            <a href="https://app.powerbi.com/reportEmbed?reportId=6fd20556-d266-4dee-8969-77bb040d3f36&autoAuth=true&ctid=73c0ac5c-e833-4928-b586-f242f2b29b3f" alt=""><h4>Redireccionar por medio de link</h4>
             </a>
           </div>
         </div>
@@ -30,7 +30,7 @@
             Opcion 2
           </div>
           <div class="col-12" style="text-align:center">
-            <img src="views/img/codigoQR_informes.png" class="img-fluid" alt="">
+            <img src="views/img/codigoQR_informes.jpeg" class="img-fluid" alt="">
           </div>
         </div>
 
