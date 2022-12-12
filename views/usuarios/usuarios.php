@@ -73,7 +73,7 @@
               </div>
               <div class="col">
                 <div class="form-group">
-                  <label for="">Eliminar</label>
+                  <label for="">Accion</label>
                   <select name="perfil_usuarionuevo" id="perfil_usuarionuevo" class="form-control" required="required" required>
                     <option value="" selected="selected">Eliminar</option>
                     <?php
