@@ -10,7 +10,7 @@
 
         <div class="row">
           <div class="col-12">
-            <p style="margin-top:25px;text-align:left"> Escoge una de las dos opciones que te redirigirán al módulo de gestión y visualización de informes de Power BI. Aquí podrás descargar el informe con los filtros seleccionados y en formato PDF completo o por páginas.</p>
+            <p style="margin-top:25px;text-align:left"> Escoge una de las dos opciones que te redirigirán al módulo de gestión y visualización de informes de Power BI.</p>
             <p style="margin-top:25px;text-align:left"> Para más información, ver el "<a href="http://proyectopoli.generandocodigo.com/ayuda" style="text-decoration: none;">manual de usuario</a>" en la opción del menú de ayudas.</p>
           </div>
         </div>
@@ -20,7 +20,7 @@
             Opcion 1
           </div>
           <div class="col-12" style="text-align:center; ">
-            <a href="https://app.powerbi.com/reportEmbed?reportId=6fd20556-d266-4dee-8969-77bb040d3f36&autoAuth=true&ctid=73c0ac5c-e833-4928-b586-f242f2b29b3f" alt=""><h4>Redireccionar por medio de link</h4>
+            <a href="https://app.powerbi.com/reportEmbed?reportId=6fd20556-d266-4dee-8969-77bb040d3f36&autoAuth=true&ctid=73c0ac5c-e833-4928-b586-f242f2b29b3f" target="_blank" alt=""><h4>Redireccionar por medio de link</h4>
             </a>
           </div>
         </div>

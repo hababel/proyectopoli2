@@ -24,7 +24,7 @@
                         us.estado,
                         tu.desc_tipo
                         FROM usuarios us
-                        LEFT JOIN tipo_usuario tu ON tu.id_tipo_usuario= us.tipo_usuario";
+                        INNER JOIN tipo_usuario tu ON tu.id_tipo_usuario= us.tipo_usuario";
 
             $stm = $this->pdo->prepare($sql);
             $stm->execute();
