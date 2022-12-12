@@ -73,9 +73,9 @@
               </div>
               <div class="col">
                 <div class="form-group">
-                  <label for="">Perfil</label>
+                  <label for="">Eliminar</label>
                   <select name="perfil_usuarionuevo" id="perfil_usuarionuevo" class="form-control" required="required" required>
-                    <option value="" selected="selected">Seleccionar el perfil</option>
+                    <option value="" selected="selected">Eliminar</option>
                     <?php
                     foreach ($listaTiposUsuario as $key => $value) { ?>
 
